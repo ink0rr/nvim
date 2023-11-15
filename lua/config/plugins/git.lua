@@ -2,6 +2,12 @@ return {
   "tpope/vim-fugitive",
   "tpope/vim-rhubarb",
   {
+    "kdheepak/lazygit.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+  },
+  {
     "lewis6991/gitsigns.nvim",
     opts = {
       signs = {
