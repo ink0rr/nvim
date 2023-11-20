@@ -38,6 +38,14 @@ return {
           root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
         },
       },
+      jsonls = {
+        settings = {
+          json = {
+            validate = true,
+            schemas = require("plugins.kaidan").schemas(),
+          },
+        },
+      },
       lua_ls = {
         settings = {
           Lua = {
