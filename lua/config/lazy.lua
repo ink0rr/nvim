@@ -12,8 +12,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  "ThePrimeagen/vim-be-good",
+  "tpope/vim-sensible",
+  "tpope/vim-surround",
   "tpope/vim-sleuth",
+  "ThePrimeagen/vim-be-good",
   {
     "nvim-lualine/lualine.nvim",
     opts = {},
