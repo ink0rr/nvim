@@ -26,7 +26,8 @@ return {
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
     local builtin = require("telescope.builtin")
-    vim.keymap.set("n", "<C-p>", builtin.find_files, {})
+    vim.keymap.set("n", "<C-b>", builtin.buffers)
+    vim.keymap.set("n", "<C-p>", builtin.find_files)
     vim.cmd.cd("%:p:h")
     local git_root = find_git_root()
     if git_root then
