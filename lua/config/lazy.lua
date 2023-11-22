@@ -17,6 +17,10 @@ require("lazy").setup({
   "tpope/vim-sleuth",
   "ThePrimeagen/vim-be-good",
   {
+    "numToStr/Comment.nvim",
+    opts = {},
+  },
+  {
     "nvim-lualine/lualine.nvim",
     opts = {},
   },

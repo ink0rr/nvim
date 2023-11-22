@@ -1,7 +1,9 @@
 return {
-  "catppuccin/nvim",
-  name = "catppuccin",
+  "navarasu/onedark.nvim",
   config = function()
-    vim.cmd.colorscheme("catppuccin")
+    require("onedark").setup({
+      style = "warmer",
+    })
+    require("onedark").load()
   end,
 }
