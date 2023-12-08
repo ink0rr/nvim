@@ -17,6 +17,6 @@ vim.opt.smartindent = true
 vim.opt.termguicolors = true
 
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
+vim.keymap.set("n", "q:", "<Nop>")
 vim.keymap.set("x", "<leader>p", [["_dP]])
-vim.keymap.set("n", "<C-e>", vim.cmd.Ex)
 vim.keymap.set("n", "<C-w>", vim.cmd.bw)
