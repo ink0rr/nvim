@@ -3,9 +3,5 @@ return {
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
-  opts = {
-    view = {
-      side = "right",
-    },
-  },
+  opts = {},
 }
