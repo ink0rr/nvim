@@ -22,7 +22,21 @@ require("lazy").setup({
   },
   {
     "nvim-lualine/lualine.nvim",
-    opts = {},
+    opts = {
+      sections = {
+        lualine_b = {
+          {
+            "macro-status",
+            fmt = function()
+              local key = vim.fn.reg_recording()
+              if key:len() > 0 then
+                return "Recording @" .. key
+              end
+            end,
+          },
+        },
+      },
+    },
   },
   {
     "lukas-reineke/indent-blankline.nvim",
