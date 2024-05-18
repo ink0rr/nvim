@@ -1,7 +1,9 @@
 return {
   "stevearc/oil.nvim",
-  opts = {
-    default_file_explorer = false,
-  },
+  config = function()
+    local oil = require("oil")
+    oil.setup()
+    vim.keymap.set("n", "-", oil.open)
+  end,
   dependencies = { "nvim-tree/nvim-web-devicons" },
 }
