@@ -55,6 +55,12 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- Paste then yank again when in visual mode
+vim.keymap.set("v", "p", "pgvy")
+
+-- Disable command window
+vim.keymap.set("n", "q:", "<Nop>")
+
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
