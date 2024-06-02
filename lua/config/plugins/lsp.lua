@@ -119,20 +119,17 @@ return {
     --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+    local lspconfig = require("lspconfig")
     local servers = {
       denols = {
-        setup = {
-          root_dir = require("lspconfig").util.root_pattern("deno.json", "deno.jsonc"),
-        },
+        root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
       },
       gopls = {},
       lua_ls = {},
       rust_analyzer = {},
       tsserver = {
-        setup = {
-          root_dir = require("lspconfig").util.root_pattern("package.json"),
-          single_file_support = false,
-        },
+        root_dir = lspconfig.util.root_pattern("package.json"),
+        single_file_support = false,
       },
     }
 
@@ -158,7 +155,7 @@ return {
           -- by the server configuration above. Useful when disabling
           -- certain features of an LSP (for example, turning off formatting for tsserver)
           server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-          require("lspconfig")[server_name].setup(server)
+          lspconfig[server_name].setup(server)
         end,
       },
     })
