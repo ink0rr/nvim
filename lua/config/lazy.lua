@@ -27,6 +27,9 @@ require("lazy").setup({
     end,
     opts = {
       contrast = "soft",
+      italic = {
+        strings = false,
+      },
       transparent_mode = true,
     },
   },
